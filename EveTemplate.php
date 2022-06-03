@@ -275,7 +275,7 @@ class EveTemplate extends BaseTemplate {
 						?>
 
 						<div><a href="<?php
-						$this->text( 'searchaction' )
+						SpecialPage::newSearchPage( $this->getSkin()->getUser() )->getLocalURL()
 						?>" rel="search"><?php $this->msg( 'powersearch-legend' ) ?></a></div><?php
 					} ?>
 
