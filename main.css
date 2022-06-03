@@ -126,7 +126,7 @@
 		margin: 0;
 		margin-top: 55px;
 		margin-bottom: 3%;
-		background: url(/skins/MonoBook/html-bg.jpg?12c36) top center no-repeat #000;
+		background: url(html-bg.jpg?12c36) top center no-repeat #000;
 		overflow-y: auto;
 		left: 0px;
 		top: 0px;
@@ -352,7 +352,7 @@
 	}
 
 	.portlet li:hover {
-		background: url(/skins/MonoBook/pics/menu-arrow.png)  center right no-repeat transparent;
+		background: url(pics/menu-arrow.png)  center right no-repeat transparent;
 		background-position-x: -10px;	
 		overflow: visible;
 	}
@@ -418,7 +418,7 @@
 		position: absolute;
 		top: 16px;
 		right: -156px;
-		background: url(https://www.evelopedia.org/skins/MonoBook/pics/searchIcon.jpg) center left no-repeat transparent;
+		background: url(pics/searchIcon.jpg) center left no-repeat transparent;
 		border: transparent !important;
 		cursor: pointer;
 		color: transparent;
@@ -469,7 +469,7 @@
 	*/
 		/* this is the ul contained in the portlet ----- this changes the logon area*/
 		#pt-anon_oauth_login {
-			background: url(https://www.evelopedia.org/skins/MonoBook/pics/eve-sso-login-white-small.png) center left no-repeat !important;
+			background: url(pics/eve-sso-login-white-small.png) center left no-repeat !important;
 			padding-top: 18px !important;
 			padding-bottom: 18px !important;
 			color: transparent !important;
@@ -1500,7 +1500,7 @@ li#pt-login{
 
 li#n-EVElopedia-Home:hover {
 	color:white !important;
-	background: url(/skins/MonoBook/pics/menu-arrow.png)  center left no-repeat transparent; 
+	background: url(pics/menu-arrow.png)  center left no-repeat transparent; 
 }
 #profile-toggle-button a:hover,
 li#pt-userpage:hover,
