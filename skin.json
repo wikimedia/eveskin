@@ -12,7 +12,7 @@
 	"license-name": "GPL-2.0+",
 	"type": "skin",
 	"requires": {
-		"MediaWiki": ">= 1.25.0"
+		"MediaWiki": ">= 1.39.0"
 	},
 	"ValidSkinNames": {
 		"eveskin": {
@@ -20,6 +20,7 @@
 			"args": [
 				{
 					"name": "eveskin",
+					"bodyOnly": true,
 					"template": "EveTemplate",
 					"styles": [
 						"skins.eve.styles"

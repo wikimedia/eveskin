@@ -36,7 +36,6 @@ class EveTemplate extends BaseTemplate {
 	 * outputs a formatted page.
 	 */
 	public function execute() {
-		$this->html( 'headelement' );
 		?><div id="globalWrapper">
 		<div id="column-content">
 			<div id="content" class="mw-body" role="main">
@@ -214,10 +213,6 @@ class EveTemplate extends BaseTemplate {
 
 		</div>
 		<?php
-		$this->printTrail();
-		echo Html::closeElement( 'body' );
-		echo Html::closeElement( 'html' );
-		echo "\n";
 	}
 
 	/**
