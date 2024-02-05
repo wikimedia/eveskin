@@ -36,6 +36,7 @@ class EveTemplate extends BaseTemplate {
 	 * outputs a formatted page.
 	 */
 	public function execute() {
+		$services = \MediaWiki\MediaWikiServices::getInstance();
 		?><div id="globalWrapper">
 		<div id="column-content">
 			<div id="content" class="mw-body" role="main">
@@ -123,7 +124,7 @@ class EveTemplate extends BaseTemplate {
 						}
 
 						if ( $this->getSkin()->getUser()->isAnon() &&
-							User::groupHasPermission( '*', 'edit' )
+							$services->getGroupPermissionsLookup()->groupHasPermission( '*', 'edit' )
 						) {
 							echo Html::rawElement( 'li', [
 								'id' => 'pt-anonuserpage'
