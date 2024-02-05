@@ -505,7 +505,7 @@
 		display: table-row;
 		float: right;
 		margin-right: -53%; /*this changes the horizontal 1080direction of the logout// top buttons*/
-		margin-top: 0;
+		margin-top: 12px;
 	}
 	
 	
