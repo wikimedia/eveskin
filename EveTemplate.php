@@ -105,7 +105,6 @@ class EveTemplate extends BaseTemplate {
 					<div class="visualClear"></div>
 				</div>
 			</div>
-			<?php Hooks::run( 'MonoBookAfterContent' ); ?>
 		</div>
 		<div id="column-one"<?php $this->html( 'userlangattributes' ) ?>>
 			<h2><?php $this->msg( 'navigation-heading' ) ?></h2>
