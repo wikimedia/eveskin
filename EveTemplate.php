@@ -325,10 +325,6 @@ class EveTemplate extends BaseTemplate {
 
 					<?php
 					}
-					// Avoid PHP 7.1 warnings
-					$skin = $this;
-					Hooks::run( 'MonoBookTemplateToolboxEnd', [ &$skin ] );
-					Hooks::run( 'SkinTemplateToolboxEnd', [ &$skin, true ] );
 					?>
 				</ul>
 				<?php echo $this->getSkin()->getAfterPortlet( 'tb' ); ?>
