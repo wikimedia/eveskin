@@ -32,6 +32,42 @@ use MediaWiki\Linker\Linker;
  * @ingroup Skins
  */
 class EveTemplate extends BaseTemplate {
+	/**
+	 * Backwards compatibility method to get personal tools the "classic way" that doesn't trigger
+	 * deprecation warnings (T423303).
+	 *
+	 * @return array
+	 */
+	private function getContentActionsClassic() {
+		$cNav = $this->get( 'content_navigation' );
+		$contentActions = [];
+		$menus = $this->getSkin()->getOptions()['menus'];
+		$contentActionMenus = array_diff( $menus, [
+			'user-menu', 'notifications', 'user-interface-preferences', 'user-page'
+		] );
+		foreach( $contentActionMenus as $key  )  {
+			$contentActions = array_merge( $contentActions, $cNav[$key] );
+		}
+		return $contentActions;
+	}
+
+	/**
+	 * Backwards compatibility method to get personal tools the "classic way" that doesn't trigger
+	 * deprecation warnings (T422975).
+	 *
+	 * @return array
+	 */
+	private function getPersonalToolsClassic() {
+		$cNav = $this->get( 'content_navigation' );
+		$personalTools = array_merge(
+			$cNav['user-interface-preferences'],
+			$cNav['user-page'],
+			$cNav['notifications'],
+			$cNav['user-menu']
+		);
+
+		return $this->getSkin()->getPersonalToolsForMakeListItem( $personalTools );
+	}
 
 	/**
 	 * Template filter callback for MonoBook skin.
@@ -120,7 +156,7 @@ class EveTemplate extends BaseTemplate {
 				<div class="pBody">
 					<ul<?php $this->html( 'userlangattributes' ) ?>>
 						<?php
-						$personalTools = $this->getPersonalTools();
+						$personalTools = $this->getPersonalToolsClassic();
 
 						if ( array_key_exists( 'uls', $personalTools ) ) {
 							echo $this->makeListItem( 'uls', $personalTools['uls'] );
@@ -302,7 +338,7 @@ class EveTemplate extends BaseTemplate {
 
 			<div class="pBody">
 				<ul><?php
-					foreach ( $this->data['content_actions'] as $key => $tab ) {
+					foreach ( $this->getContentActionsClassic() as $key => $tab ) {
 						echo '
 				' . $this->makeListItem( $key, $tab );
 					} ?>
