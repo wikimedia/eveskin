@@ -1,4 +1,8 @@
 <?php
+
+use MediaWiki\Html\Html;
+use MediaWiki\Linker\Linker;
+
 /**
  * Eve skin, is based on the Monobook skin.
  *
