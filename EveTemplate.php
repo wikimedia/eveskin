@@ -97,7 +97,7 @@ class EveTemplate extends BaseTemplate {
 				?>
 				<h1 id="firstHeading" class="firstHeading" lang="<?php
 				$this->data['pageLanguage'] =
-					$this->getSkin()->getTitle()->getPageViewLanguage()->getHtmlCode();
+					$this->getSkin()->getOutput()->getLanguage()->getHtmlCode();
 				$this->text( 'pageLanguage' );
 				?>"><?php $this->html( 'title' ) ?></h1>
 				<?php
